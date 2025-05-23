@@ -889,7 +889,7 @@ summary::before {
   z-index: 999;
   width: 60px;
   height: 60px;
-  background-color: transparent; /* pode deixar sem cor se a imagem for redonda */
+  background-color: #080808; /* pode deixar sem cor se a imagem for redonda */
   border-radius: 50%;
   display: flex;
   align-items: center;

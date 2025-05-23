@@ -1,106 +1,216 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nossa Equipe | KodNea</title>
-  <link rel="stylesheet" href="stilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós | KodNea</title>
   <style>
-    body {
-      background: #000 url(capa-de-fundo-sobre-nos.png) no-repeat center center;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #fff;
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 80px 20px;
-      text-align: center;
+    body {
+      font-family: "Martel Sans", sans-serif;
+      background: linear-gradient(to right, #0084FF, #3304FF, #A633FF);
+      color: #0e390e;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
+    .wrap {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      width: 85vmin;
+      height: 65vmin;
+      border: 8px solid;
+      border-image: linear-gradient(
+        -50deg,
+        #0084ff,
+        #3304ff,
+        #a633ff,
+        #3304ff,
+        #0084ff
+      ) 1;
+      transition: 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
     }
 
-    .texto-sobre {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #e0e0e0;
-      text-align: justify;
-      font-weight: 700;
+    .overlay {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      background: #1e1e2f;
+      transition: 0.4s ease-in-out;
+      z-index: 1;
+    }
+
+    .overlay-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 15vmin;
+      height: 100%;
+      padding: 0.5rem;
+      border: 3px solid;
+      border-image: linear-gradient(to bottom, #fff 5%, #3304ff 50%, #fff 95%) 0 0 0 100%;
+      transition: 0.3s ease-in-out 0.2s;
+      z-index: 1;
+      color: white;
+    }
+
+    .overlay-content h1 {
+      font-size: 1rem;
+      color: white;
+    }
+
+    .image-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60vmin;
+      height: 100%;
+      background-image: url("logo-principal.png");
+      background-size: cover;
+      background-position: center;
+      transition: 0.3s ease-in-out;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      display: flex;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      background: yellow;
+      border: 1px solid indigo;
+      border-radius: 50%;
+    }
+
+    .text {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60vmin;
+      height: 100%;
+      padding: 3vmin 4vmin;
+      background: #fff;
+      box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.4);
+      overflow-y: auto;
+    }
+
+    .inset {
+      max-width: 50%;
+      margin: 0.25em 1em 1em 0;
+      border-radius: 0.25em;
+      float: left;
+    }
+
+    .wrap:hover .overlay {
+      transform: translateX(-60vmin);
+    }
+
+    .wrap:hover .image-content {
+      width: 30vmin;
+    }
+
+    .wrap:hover .overlay-content {
+      border: none;
+      transition-delay: 0.2s;
+      transform: translateX(60vmin);
+    }
+
+    .wrap:hover .dots .dot {
+      background: white;
     }
 
     .btn-voltar {
-  margin: 40px auto 0;       /* centraliza horizontalmente */
-  display: block;            /* necessário para margin auto funcionar */
-  background-color: #00bfff;
-  color: #000;
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  max-width: 300px;
-  width: fit-content;
-  text-align: center;
-}
-
-    .btn-voltar:hover {
-      background-color: #0095cc;
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #fff;
+      color: #3304FF;
+      padding: 10px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #3304FF;
+      transition: 0.3s ease;
     }
 
-    @media (max-width: 768px) {
-  .btn-voltar {
-    font-size: 1rem;
-    padding: 12px 24px;
-    width: fit-content;
-  }
-}
+    .btn-voltar:hover {
+      background-color: #3304FF;
+      color: #fff;
+    }
 
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #000000;
+      margin-bottom: 1rem;
+    }
 
-      h1 {
-        font-size: 2rem;
-      }
-
-      .texto-sobre {
-        font-size: 1rem;
-        text-align: left;
-      }
-
-      .btn-voltar {
-        width: auto;
-        padding: 12px 24px;
-        font-size: 1rem;
-      }
+    p2 {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+     .overlay-content p2 {
+      font-size: 0.5rem;
+      color: white;
+    }
     
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Nossa Equipe</h1>
 
-    <div class="texto-equipe">
-      <p><strong>Pessoas com mente no futuro e foco em resultado.</strong></p>
-      <p>Na KodNea, reunimos profissionais que unem visão estratégica, domínio em tecnologia e paixão por vendas. Cada integrante do time acredita no poder da inteligência artificial para transformar o jeito de vender e atender.</p>
-
-      <p><strong>Pensamos em vendas e agimos como desenvolvedores de soluções.</strong></p>
-      <p>Nosso time entende os desafios do comercial. Por isso, todas as soluções que criamos são pensadas para gerar impacto real: mais conversão, menos esforço e processos escaláveis.</p>
-
-      <p><strong>A tecnologia é o meio.</strong></p>
-      <p>A performance do seu time é o que nos move, inspira nossas soluções e guia o que fazemos. Cada linha de código, cada automação e cada processo que desenvolvemos tem um único objetivo: potencializar o que sua equipe já faz de melhor e levar seus resultados ao próximo nível.</p>
-
-      <p><strong>Acreditamos em parceria.</strong></p>
-      <p>Só entregamos o que usaríamos no nosso próprio negócio. Somos próximos dos nossos clientes. Trabalhamos lado a lado para construir soluções que funcionam de verdade no dia a dia, sem promessas vazias, com entrega sólida e contínua evolução.</p>
+  <div class="wrap animate pop">
+    <div class="overlay">
+      <div class="overlay-content animate slide-left delay-2">
+        <h1 class="animate slide-left pop delay-4">Sobre nossa equipe</h1>
+        <p2 class="animate slide-left pop delay-5"></p2>
+      </div>
+      <div class="image-content animate slide delay-5"></div>
+      <div class="dots animate">
+        <div class="dot animate slide-up delay-6"></div>
+        <div class="dot animate slide-up delay-7"></div>
+        <div class="dot animate slide-up delay-8"></div>
+      </div>
     </div>
 
-    <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
+    <div class="text">
+      <p><img class="inset" src="logo-principal.png" alt="Logo da KodNea" />
+       <strong>Nossa Equipe</strong> 
+      <p><strong>Pessoas Com Mente No Futuro E Foco Em Resultado</strong></p>
+      <p>Na KodNea, reunimos profissionais que unem visão estratégica, domínio em tecnologia e paixão por vendas. Cada integrante do time acredita no poder da inteligência artificial para transformar o jeito de vender e atender.</p>
+
+      <strong>Pensamos em Vendas</strong>
+      <p><strong>E Agimos Como Desenvolvedores De Soluções</strong></p>
+      <p>Nosso time entende os desafios do comercial. Por isso, todas as soluções que criamos são pensadas para gerar impacto real: mais conversão, menos esforço e processos escaláveis.</p>
+
+     <strong>Tecnologia é o Meio</strong> 
+      <p>A performance do seu time é o que nos move, inspira nossas soluções e guia o que fazemos. Cada linha de código, cada automação e cada processo que desenvolvemos tem um único objetivo: potencializar o que sua equipe já faz de melhor e levar seus resultados ao próximo nível.</p>
+
+      <strong>em Parceria</strong> 
+      <p><strong>Só Entregamos O Que Usaríamos No Nosso Próprio Negócio</strong></p>
+      <p>Somos próximos dos nossos clientes. Trabalhamos lado a lado para construir soluções que funcionam de verdade no dia a dia, sem promessas vazias, com entrega sólida e contínua evolução.</p>
+      <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
+    </div>
   </div>
+
 </body>
 </html>
