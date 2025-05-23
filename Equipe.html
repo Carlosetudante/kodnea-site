@@ -7,23 +7,20 @@
   <link rel="stylesheet" href="stilo.css">
   <style>
     body {
-     background: linear-gradient(rgb(0 0 0 / 77%), rgb(0 0 0 / 79%)), url(capa-de-fundo-sobre-nos.png);
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 160px;
-    padding: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+      background: #000 url(capa-de-fundo-sobre-nos.png) no-repeat center center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: #fff;
       font-family: Arial, sans-serif;
-      
+      margin: 0;
+      padding: 0;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
@@ -32,72 +29,76 @@
       margin-bottom: 20px;
     }
 
-    .equipe-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 40px;
-    }
-
-    .membro {
-      background-color: #ffffff10;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-
-    .membro img {
-      width: 100%;
-      max-width: 180px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-
-    .membro h3 {
-      margin: 10px 0 5px;
-    }
-
-    .membro p {
-      font-size: 0.9rem;
-      color: #ccc;
+    .texto-sobre {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      text-align: justify;
+      font-weight: 700;
     }
 
     .btn-voltar {
-      margin-top: 40px;
-      display: inline-block;
-      background-color: #00bfff;
-      color: #000;
-      padding: 12px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
+  margin: 40px auto 0;       /* centraliza horizontalmente */
+  display: block;            /* necessário para margin auto funcionar */
+  background-color: #00bfff;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  max-width: 300px;
+  width: fit-content;
+  text-align: center;
+}
 
     .btn-voltar:hover {
       background-color: #0095cc;
     }
+
+    @media (max-width: 768px) {
+  .btn-voltar {
+    font-size: 1rem;
+    padding: 12px 24px;
+    width: fit-content;
+  }
+}
+
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .texto-sobre {
+        font-size: 1rem;
+        text-align: left;
+      }
+
+      .btn-voltar {
+        width: auto;
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+    
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Nossa Equipe</h1>
-    <h2>Pessoas Com Mente No Futuro E Foco Em Resultado
-Na KodNea, reunimos profissionais que unem visão estratégica, domínio em tecnologia e paixão por vendas. Cada integrante do time acredita no poder da inteligência artificial para transformar o jeito de vender e atender.
- 
-PENSAMOS EM VENDAS
-E Agimos Como Desenvolvedores De Soluções
-Nosso time entende os desafios do comercial. Por isso, todas as soluções que criamos são pensadas para gerar impacto real: mais conversão, menos esforço e processos escaláveis.
- 
-A TECNOLOGIA É O MEIO
-A performance do seu time é o que nos move, inspira nossas soluções e guia o que fazemos.
-Cada linha de código, cada automação e cada processo que desenvolvemos tem um único objetivo: potencializar o que sua equipe já faz de melhor e levar seus resultados ao próximo nível.
- 
-ACREDITAMOS EM PARCERIA
-Só Entregamos O Que Usaríamos No Nosso Próprio Negócio
-Somos próximos dos nossos clientes. Trabalhamos lado a lado para construir soluções que funcionam de verdade no dia a dia, sem promessas vazias, com entrega sólida e contínua evolução
-</h2>
 
-    
+    <div class="texto-equipe">
+      <p><strong>Pessoas com mente no futuro e foco em resultado.</strong></p>
+      <p>Na KodNea, reunimos profissionais que unem visão estratégica, domínio em tecnologia e paixão por vendas. Cada integrante do time acredita no poder da inteligência artificial para transformar o jeito de vender e atender.</p>
+
+      <p><strong>Pensamos em vendas e agimos como desenvolvedores de soluções.</strong></p>
+      <p>Nosso time entende os desafios do comercial. Por isso, todas as soluções que criamos são pensadas para gerar impacto real: mais conversão, menos esforço e processos escaláveis.</p>
+
+      <p><strong>A tecnologia é o meio.</strong></p>
+      <p>A performance do seu time é o que nos move, inspira nossas soluções e guia o que fazemos. Cada linha de código, cada automação e cada processo que desenvolvemos tem um único objetivo: potencializar o que sua equipe já faz de melhor e levar seus resultados ao próximo nível.</p>
+
+      <p><strong>Acreditamos em parceria.</strong></p>
+      <p>Só entregamos o que usaríamos no nosso próprio negócio. Somos próximos dos nossos clientes. Trabalhamos lado a lado para construir soluções que funcionam de verdade no dia a dia, sem promessas vazias, com entrega sólida e contínua evolução.</p>
+    </div>
 
     <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
   </div>
