@@ -377,21 +377,30 @@ digitar();
 </script>
 
 <script>
-let lastScroll = 0;
-const header = document.querySelector('header');
+  let lastScrollTop = 0;
+  const header = document.querySelector("header");
 
-window.addEventListener('scroll', function() {
-  const currentScroll = window.pageYOffset;
-  if (currentScroll > lastScroll && currentScroll > 80) {
-    // Rolando para baixo
-    header.style.top = '-120px'; // Ajuste conforme a altura do seu header
-  } else {
-    // Rolando para cima
-    header.style.top = '0';
-  }
-  lastScroll = currentScroll;
-});
+  // Esconde ao rolar para baixo / mostra ao rolar para cima
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 60) {
+      header.style.top = "-100px";
+    } else {
+      header.style.top = "0";
+    }
+
+    lastScrollTop = scrollTop;
+  });
+
+  // Esconde o menu ao clicar em qualquer link do menu
+  document.querySelectorAll("header a[href^='#'], header a[href$='.html']").forEach(link => {
+    link.addEventListener("click", () => {
+      header.style.top = "-100px";
+    });
+  });
 </script>
+
   
     <div class="container">
      
