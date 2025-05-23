@@ -890,7 +890,7 @@ summary::before {
 /*Whatsapp*/
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
+  bottom: 90px;
   right: 20px;
   z-index: 999;
   width: 60px;
@@ -956,7 +956,7 @@ summary::before {
 /* Estilo do botão de Instagram */
 .instagram-float {
   position: fixed;
-  bottom: 80px;    /* distância do fundo */
+  bottom: 90px;    /* distância do fundo */
   left: 20px;      /* canto esquerdo */
   z-index: 1000;
 }
