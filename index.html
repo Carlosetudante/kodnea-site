@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KodNea</title>
   <link rel="stylesheet" href="stilo.css">
+
+<style>
+  .bloco-flex-kodnea {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+
+  .coluna-imagem-kodnea img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .coluna-beneficios-kodnea {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  @media (max-width: 768px) {
+    .bloco-flex-kodnea {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .coluna-beneficios-kodnea {
+      text-align: center;
+    }
+  }
+</style>
+
 </head>
 <body>
 
@@ -74,9 +111,21 @@
 				 </div>
 				 </div>
 
+<!--instagram-->
+
+<a href="https://www.instagram.com/kodnea.ia/" class="instagram-float" target="_blank" aria-label="Nosso Instagram">
+  <img src="insta.jpeg" alt="Instagram">
+</a>
 
           <!-- Seção sobre -->
-         <div class="elementor-element elementor-element-839c8dc e-con-full e-flex e-con e-child" data-id="839c8dc" data-element_type="container">
+         
+<div class="bloco-flex-kodnea">
+  <div class="coluna-imagem-kodnea">
+    <img src="celular.png" alt="Simulação WhatsApp">
+  </div>
+  <div class="coluna-beneficios-kodnea">
+
+<div class="elementor-element elementor-element-839c8dc e-con-full e-flex e-con e-child" data-id="839c8dc" data-element_type="container">
 				 <div class="elementor-element elementor-element-85ed3fc elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="85ed3fc" data-element_type="widget" data-widget_type="icon-list.default">
 				 <div class="elementor-widget-container">
 							<ul class="elementor-icon-list-items">
@@ -237,7 +286,7 @@ quando necessário</p>
 
 
       <div class="servico-box">
-  <h3>Escritórios de Advocacia</h3>
+  <h3>Agente para Escritórios de Advocacia</h3>
   <p>Captação e qualificação automatizada de clientes,
 agendamento de consultas jurídicas e respostas
 instantâneas para dúvidas recorrentes, garantindo um
@@ -247,7 +296,7 @@ atendimento mais ágil e eficiente.
 
     
       <div class="servico-box">
-  <h3>Clínicas Médicas</h3>
+  <h3>Agente para Clínicas Médicas</h3>
   <p>Triagem inteligente de pacientes, agendamento de
 consultas e lembretes de retorno, reduzindo faltas e
 otimizando a agenda médica.
@@ -256,7 +305,7 @@ otimizando a agenda médica.
 
 
       <div class="servico-box">
-  <h3> Clínicas de Estética</h3>
+  <h3>Agente para Clínicas de Estética</h3>
   <p>Agendamento automatizado de procedimentos, envio de
 lembretes para clientes e esclarecimento de dúvidas sobre
 tratamentos, aumentando a taxa de comparecimento e
@@ -265,7 +314,7 @@ satisfação.</p>
 
 
       <div class="servico-box">
-  <h3> Mercado Imobiliário</h3>
+  <h3>Agente para Mercado Imobiliário</h3>
   <p>Agendamento automatizado de visitas, qualificação de
 potenciais compradores e respostas imediatas sobre
 imóveis disponíveis, otimizando o tempo dos corretores.</p>
@@ -273,14 +322,14 @@ imóveis disponíveis, otimizando o tempo dos corretores.</p>
 
 
       <div class="servico-box">
-  <h3>Suporte ao Cliente</h3>
+  <h3>Agente de Suporte ao Cliente</h3>
   <p>Atendimento 24/7 sem filas, respostas instantâneas para
 dúvidas frequentes e direcionamento inteligente para o
 setor adequado, elevando a satisfação do cliente.</p>
 </div>
 
       <div class="servico-box">
-  <h3> Times de Vendas</h3>
+  <h3>Agente para Times de Vendas</h3>
   <p>Qualificação de leads em tempo real, segmentação
 inteligente de clientes e automação do primeiro contato,
 permitindo que vendedores foquem nas melhores

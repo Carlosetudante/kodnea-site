@@ -946,3 +946,29 @@ summary::before {
     overflow: visible;
   }
 }
+.celular-demo img {
+  width: 100%;
+  max-width: 350px;  /* ou ajuste conforme o layout */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* Estilo do botão de Instagram */
+.instagram-float {
+  position: fixed;
+  bottom: 80px;    /* distância do fundo */
+  left: 20px;      /* canto esquerdo */
+  z-index: 1000;
+}
+
+.instagram-float img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.instagram-float img:hover {
+  transform: scale(1.1);
+}
