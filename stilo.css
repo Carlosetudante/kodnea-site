@@ -976,7 +976,7 @@ summary::before {
 .fab-container {
   position: fixed;
   bottom: 80px;
-  right: 20px;
+  right: 3px;
   z-index: 999;
 }
 
