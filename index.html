@@ -53,15 +53,19 @@
     <div class="logo">
       <img src="logodabarra.png" alt="Logo KodNea">
     </div>
+    <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
     <div class="menu-central">
-      <nav>
+      <nav id="main-navigation">
         <ul>
           <li><a href="#home">Início</a></li>
-          <a href="Sobre.html" class="btn-Sobre">Sobre</a>
+          <li><a href="Sobre.html" class="btn-Sobre">Sobre</a></li>
           <li><a href="#Servicos">Serviços</a></li>
-          <li><a href="#contato">Contato</a></li><li>
-          <a href="Equipe.html" class="btn-nossa-equipe">Equipe</a>
-
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="Equipe.html" class="btn-nossa-equipe">Equipe</a></li>
         </ul>
       </nav>
     </div>
@@ -434,3 +438,18 @@ window.addEventListener('scroll', function() {
 
 </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const header = document.querySelector('header');
+
+    if (menuToggle && header) {
+      menuToggle.addEventListener('click', function () {
+        header.classList.toggle('menu-active');
+        const isExpanded = header.classList.contains('menu-active');
+        menuToggle.setAttribute('aria-expanded', isExpanded);
+      });
+    }
+  });
+</script>
