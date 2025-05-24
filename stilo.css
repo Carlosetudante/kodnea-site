@@ -21,10 +21,10 @@ body {
 
 /* Cabeçalho fixo */
 header {
-  
-  align-items: center;
-  justify-content: flex-start; /* Logo no canto esquerdo */
-  padding: 0 32px;
+  display: flex; /* Para o .header-container se comportar corretamente */
+  /* align-items: center; -- Removido, será no .header-container */
+  /* justify-content: flex-start; -- Removido, será no .header-container */
+  /* padding: 0 32px; -- Removido, será no .header-container */
   background-color: #000;
   position: fixed;
   top: 0;
@@ -33,11 +33,23 @@ header {
   z-index: 1000;
   box-shadow: 0 2px 8px #00000040;
   transition: top 0.4s;
+  /* A altura do header pode ser definida aqui ou ser automática baseada no conteúdo */
 }
 
+.header-container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente logo e menu */
+  justify-content: space-between; /* Logo à esquerda, menu à direita (ou espaço para ele) */
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 15px; /* Padding lateral */
+}
 
 .logo {
-  margin-right: 50px;
+  margin-right: 50px; /* Restaura a margem para separar do menu, se necessário */
+  /* margin-bottom: 0; -- Removido, não é mais necessário */
 }
 
 .logo img {
@@ -46,22 +58,29 @@ header {
 
 
 .menu-central {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute; /* Restaurado para centralização precisa */
+    left: 50%; /* Restaurado */
+    transform: translateX(-50%); /* Restaurado */
     margin: 0;
     backdrop-filter: blur(10px);
     padding: 1rem;
-    width: 28%;
+    width: 28%; /* Restaurado para o valor anterior, ajuste se necessário */
     border-radius: 30px;
     /* border: 1px solid rgba(255, 255, 255, 0.5); */
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
-    justify-content: center;
+    justify-content: center; /* Para centralizar os itens <ul> dentro dele */
 }
 
+.menu-central ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px; /* Espaçamento entre os itens do menu */
+}
 
 
 
@@ -767,7 +786,7 @@ summary::before {
     background-color: transparent;
   }
   .logo {
-    margin: 0 auto 0px auto;
+  
     display: flex;
     justify-content: center;
     align-items: center;
