@@ -21,7 +21,7 @@ body {
 
 /* Cabeçalho fixo */
 header {
-  display: flex;
+  
   align-items: center;
   justify-content: flex-start; /* Logo no canto esquerdo */
   padding: 0 32px;
@@ -565,7 +565,7 @@ summary::before {
 @media (max-width: 600px) {
   header {
     flex-direction: column;
-    padding: 10px 10px;
+    padding: 1px 10px;
   }
   .logo img {
     height: 50px;
@@ -767,7 +767,7 @@ summary::before {
     background-color: transparent;
   }
   .logo {
-    margin: 0 auto 16px auto;
+    margin: 0 auto 0px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1101,14 +1101,32 @@ summary::before {
 
 @media (max-width: 768px) {
   header {
-    justify-content: space-between; /* Para alinhar logo e toggle */
+    justify-content: center; /* Centraliza o conteúdo do header (logo) */
+    position: fixed; /* Para posicionamento absoluto do menu-toggle */
+    padding: 0 15px; /* Ajuste o padding se necessário */
+  }
+
+  .logo {
+    margin-right: 0; /* Remove margem que impede centralização */
+    /* Opcional: se o logo não centralizar automaticamente */
+    /* flex-grow: 1;
+    display: flex;
+    justify-content: center; */
+  }
+
+  .menu-toggle {
+    display: block; /* Mostra o botão hambúrguer */
+    position: absolute;
+    right: 15px; /* Ajuste conforme o padding do header */
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: initial; /* Sobrescreve o margin-left: auto */
   }
 
   .menu-central {
     display: none; /* Esconde o menu de navegação principal */
     position: absolute;
     top: 100%; /* Abaixo do header */
-    
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9); /* Fundo para o menu dropdown */
     padding: 0;
@@ -1140,10 +1158,6 @@ summary::before {
   
   #main-navigation ul li:last-child a {
     border-bottom: none;
-  }
-
-  .menu-toggle {
-    display: block; /* Mostra o botão hambúrguer */
   }
 
   /* Animação do botão hambúrguer para "X" quando ativo */
