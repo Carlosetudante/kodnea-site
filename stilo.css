@@ -972,3 +972,109 @@ summary::before {
 .instagram-float img:hover {
   transform: scale(1.1);
 }
+
+.fab-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 999;
+}
+
+.fab-checkbox {
+  display: none;
+}
+
+.fab-button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #3304ff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.fab-icon {
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.fab-options {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.fab-option {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(0);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.fab-option img {
+  width: 28px;
+  height: 28px;
+}
+
+.fab-checkbox:checked ~ .fab-options .fab-option {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fab-checkbox:checked ~ .fab-options .whatsapp {
+  transform: translateY(-70px);
+  transition-delay: 0.1s;
+}
+
+.fab-checkbox:checked ~ .fab-options .instagram {
+  transform: translateY(-140px);
+  transition-delay: 0.25s;
+}
+
+/* Efeito de gota d’água */
+.ripple-effect {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s ease-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fab-button:active .ripple-effect {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(8);
+    opacity: 0;
+  }
+}

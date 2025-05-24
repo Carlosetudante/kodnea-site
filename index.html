@@ -45,8 +45,7 @@
 </head>
 <body>
 
-  <a href="https://wa.me/5535999692798" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
-  <img src="KodNeawhatsapp.png" alt="WhatsApp"></a>
+  
 
 
   <!-- Cabeçalho com menu -->
@@ -111,11 +110,23 @@
 				 </div>
 				 </div>
 
-<!--instagram-->
+<div class="fab-container">
+  <input type="checkbox" class="fab-checkbox" id="fab-toggle">
+  
+  <label for="fab-toggle" class="fab-button">
+    <span class="fab-icon">+</span>
+    <span class="ripple-effect"></span>
+  </label>
 
-<a href="https://www.instagram.com/kodnea.ia/" class="instagram-float" target="_blank" aria-label="Nosso Instagram">
-  <img src="insta.jpeg" alt="Instagram">
-</a>
+  <div class="fab-options">
+    <a href="https://wa.me/5535999692798" class="fab-option whatsapp" target="_blank">
+      <img src="KodNeawhatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.instagram.com/kodnea.ia/" class="fab-option instagram" target="_blank">
+      <img src="insta.jpeg" alt="Instagram">
+    </a>
+  </div>
+</div>
 
           <!-- Seção sobre -->
          
@@ -377,30 +388,21 @@ digitar();
 </script>
 
 <script>
-  let lastScrollTop = 0;
-  const header = document.querySelector("header");
+let lastScroll = 0;
+const header = document.querySelector('header');
 
-  // Esconde ao rolar para baixo / mostra ao rolar para cima
-  window.addEventListener("scroll", function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop && scrollTop > 60) {
-      header.style.top = "-100px";
-    } else {
-      header.style.top = "0";
-    }
-
-    lastScrollTop = scrollTop;
-  });
-
-  // Esconde o menu ao clicar em qualquer link do menu
-  document.querySelectorAll("header a[href^='#'], header a[href$='.html']").forEach(link => {
-    link.addEventListener("click", () => {
-      header.style.top = "-100px";
-    });
-  });
+window.addEventListener('scroll', function() {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > lastScroll && currentScroll > 80) {
+    // Rolando para baixo
+    header.style.top = '-120px'; // Ajuste conforme a altura do seu header
+  } else {
+    // Rolando para cima
+    header.style.top = '0';
+  }
+  lastScroll = currentScroll;
+});
 </script>
-
   
     <div class="container">
      
