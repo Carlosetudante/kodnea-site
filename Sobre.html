@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre Nós | KodNea</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,205 +13,89 @@
     }
 
     body {
-      font-family: "Martel Sans", sans-serif;
-      background: linear-gradient(to right, #0084FF, #3304FF, #A633FF);
-      color: #0e390e;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(270deg, #0084FF, #3304FF, #A633FF);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0;
+      padding: 40px 20px;
     }
 
-    .wrap {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      width: 150vmin;
-      height: 97vmin;
-      border: 8px solid;
-      border-image: linear-gradient(
-        -50deg,
-        #0084ff,
-        #3304ff,
-        #a633ff,
-        #3304ff,
-        #0084ff
-      ) 1;
-      transition: 0.3s ease-in-out;
-      position: relative;
-      overflow: hidden;
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    .overlay {
-      position: relative;
-      display: flex;
-      width: 100%;
-      height: 100%;
-      padding: 1rem;
-      background: #1e1e2f;
-      transition: 0.4s ease-in-out;
-      z-index: 1;
+    .container {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 
-    .overlay-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 15vmin;
-      height: 100%;
-      padding: 0.5rem;
-      border: 3px solid;
-      border-image: linear-gradient(to bottom, #fff 5%, #3304ff 50%, #fff 95%) 0 0 0 100%;
-      transition: 0.3s ease-in-out 0.2s;
-      z-index: 1;
-      color: white;
-    }
-
-    .overlay-content h1 {
-      font-size: 1rem;
-      color: white;
-    }
-
-    .image-content {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 60vmin;
-      height: 100%;
-      background-image: url("logo-principal.png");
-      background-size: cover;
-      background-position: center;
-      transition: 0.3s ease-in-out;
-    }
-
-    .dots {
-      position: absolute;
-      bottom: 1rem;
-      right: 2rem;
-      display: flex;
-      gap: 10px;
-    }
-
-    .dot {
-      width: 14px;
-      height: 14px;
-      background: yellow;
-      border: 1px solid indigo;
-      border-radius: 50%;
-    }
-
-    .text {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 60vmin;
-      height: 100%;
-      padding: 3vmin 4vmin;
-      background: #fff;
-      box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.4);
-      overflow-y: auto;
-    }
-
-    .inset {
-      max-width: 50%;
-      margin: 0.25em 1em 1em 0;
-      border-radius: 0.25em;
-      float: left;
-    }
-
-    .wrap:hover .overlay {
-      transform: translateX(-60vmin);
-    }
-
-    .wrap:hover .image-content {
-      width: 30vmin;
-    }
-
-    .wrap:hover .overlay-content {
-      border: none;
-      transition-delay: 0.2s;
-      transform: translateX(60vmin);
-    }
-
-    .wrap:hover .dots .dot {
-      background: white;
-    }
-
-    .btn-voltar {
-      margin-top: 1rem;
-      display: inline-block;
-      background-color: #fff;
-      color: #3304FF;
-      padding: 10px 24px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #3304FF;
-      transition: 0.3s ease;
-    }
-
-    .btn-voltar:hover {
-      background-color: #3304FF;
-      color: #fff;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #000000;
-      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: justify;
+      color: #f0f0f0;
     }
 
-    p2 {
-      font-size: 1.5rem;
-      line-height: 1.6;
-      color: #ffffff;
-      margin-bottom: 1rem;
+    .btn-voltar {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #fff;
+      color: #3304FF;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+      position: center;
     }
-     .overlay-content p2 {
-      font-size: 0.5rem;
-      color: white;
-    }
-    
 
+    .btn-voltar:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
 
-  <div class="wrap animate pop">
-    <div class="overlay">
-      <div class="overlay-content animate slide-left delay-2">
-        <h1 class="animate slide-left pop delay-4">Sobre a KodNea</h1>
-        <p2 class="animate slide-left pop delay-5"></p2>
-      </div>
-      <div class="image-content animate slide delay-5"></div>
-      <div class="dots animate">
-        <div class="dot animate slide-up delay-6"></div>
-        <div class="dot animate slide-up delay-7"></div>
-        <div class="dot animate slide-up delay-8"></div>
-      </div>
-    </div>
+  <div class="container">
+    <h1>Sobre a KodNea</h1>
 
-    <div class="text">
-      <p><img class="inset" src="logo-principal.png" alt="Logo da KodNea" />
-        Na KodNea, acreditamos que a inteligência artificial pode transformar a forma como as empresas vendem, atendem e principalmente se relacionam com seus clientes.
-      </p>
+    <p>
+      Na KodNea, acreditamos que a inteligência artificial pode transformar a forma como as empresas vendem, atendem e principalmente se relacionam com seus clientes.
+    </p>
 
-      <p>
-        Nossa missão é ajudar negócios a escalar resultados comerciais replicando o desempenho dos seus melhores profissionais — Atendentes, SDRs e Vendedores — por meio de soluções inteligentes, ágeis e acessíveis.
-      </p>
+    <p>
+      Nossa missão é ajudar negócios a escalar resultados comerciais replicando o desempenho dos seus melhores profissionais — Atendentes, SDRs e Vendedores — por meio de soluções inteligentes, ágeis e acessíveis.
+    </p>
 
-      <p>
-        Unimos tecnologia de ponta com uma visão prática de vendas para automatizar processos, qualificar leads, personalizar atendimentos e aumentar a conversão sem depender do fator sorte ou talento isolado.
-      </p>
+    <p>
+      Unimos tecnologia de ponta com uma visão prática de vendas para automatizar processos, qualificar leads, personalizar atendimentos e aumentar a conversão sem depender do fator sorte ou talento isolado.
+    </p>
 
-      <p>
-        Somos mais do que uma empresa de tecnologia: somos parceiros na construção do futuro comercial das organizações que querem crescer com inteligência e eficiência.
-      </p>
+    <p>
+      Somos mais do que uma empresa de tecnologia: somos parceiros na construção do futuro comercial das organizações que querem crescer com inteligência e eficiência.
+    </p>
 
-      <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
-    </div>
+    <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
   </div>
 
 </body>

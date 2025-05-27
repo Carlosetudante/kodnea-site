@@ -1033,14 +1033,14 @@ summary::before {
 }
 
 .fab-option {
-  position: absolute;
+  position: relative;
   bottom: 0;
   right: 0;
   width: 50px;
   height: 50px;
-  background: white;
+  
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.3); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1190,3 +1190,166 @@ summary::before {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+.fab-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.fab-button {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #3304FF;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  line-height: 64px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab-button:hover {
+  background-color: #0084FF;
+}
+
+.fab-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.fab-option {
+  margin: 10px 0;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.fab-icon-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.fab-icon-img:hover {
+  transform: scale(1.1);
+}
+
+.fab-checkbox {
+  display: none;
+}
+
+.fab-checkbox:checked + .fab-button + .fab-options {
+  display: flex;
+}
+
+/* Estilos para o Floating Action Button (FAB) */
+.fab-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.fab-button {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #3304FF;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  line-height: 64px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab-button:hover {
+  background-color: #0084FF;
+}
+
+.fab-options {
+  display: flex; /* Alterado para flex para permitir animações nos filhos */
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  position: absolute; /* Para posicionar corretamente em relação ao botão principal */
+  right: 0;
+  bottom: 74px; /* (altura do fab-button + margem) */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none; /* Evita interação quando oculto */
+}
+
+.fab-option {
+  margin: 15px 0; /* Margem vertical aumentada para 15px */
+  text-decoration: none;
+  display: inline-block;
+  opacity: 0;
+  /* transform: translateY(20px); Removido daqui, será específico por child */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Evita interação quando oculto */
+}
+
+/* Posições iniciais para o efeito escada mais pronunciado */
+.fab-option:nth-child(1) {
+  transform: translateY(15px); /* Começa um pouco abaixo */
+}
+.fab-option:nth-child(2) {
+  transform: translateY(35px); /* Começa mais abaixo */
+}
+/* Adicione mais .fab-option:nth-child(n) se tiver mais opções */
+
+.fab-icon-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease; /* Mantido o ease para o hover */
+}
+
+.fab-icon-img:hover {
+  transform: scale(1.1);
+}
+
+.fab-checkbox {
+  display: none;
+}
+
+.fab-checkbox:checked + .fab-button + .fab-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Permite interação quando visível */
+}
+
+.fab-checkbox:checked + .fab-button + .fab-options .fab-option {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Permite interação quando visível */
+}
+
+/* Efeito escada com delay */
+.fab-checkbox:checked + .fab-button + .fab-options .fab-option:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.fab-checkbox:checked + .fab-button + .fab-options .fab-option:nth-child(2) {
+  transition-delay: 0.1s;
+}
+/* Adicione mais nth-child seletores se tiver mais opções */
