@@ -909,11 +909,11 @@ summary::before {
 /*Whatsapp*/
 .whatsapp-float {
   position: fixed;
-  bottom: 90px;
+  bottom: 200px;
   right: 20px;
   z-index: 999;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: #080808; /* pode deixar sem cor se a imagem for redonda */
   border-radius: 50%;
   display: flex;
@@ -1353,3 +1353,52 @@ summary::before {
   transition-delay: 0.1s;
 }
 /* Adicione mais nth-child seletores se tiver mais opções */
+
+/* Botão Instagram */
+.btn-instagram {
+  display: inline-flex; /* Alterado para inline-flex para alinhar o ícone e o texto */
+  align-items: center; /* Alinha verticalmente o ícone e o texto */
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  padding: 12px 25px;
+  margin-top: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-instagram:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-icon {
+  width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+  height: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+form {
+  position: relative;
+  padding-bottom: 60px; /* espaço extra para o botão */
+}
+
+.instagram-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.instagram-badge img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.instagram-badge img:hover {
+  transform: scale(1.1);
+}

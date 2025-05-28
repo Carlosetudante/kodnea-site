@@ -123,24 +123,32 @@
 				 </div>
 
 <!-- Botões flutuantes redes sociais -->
-<div class="fab-container">
-  <input type="checkbox" class="fab-checkbox" id="fab-toggle">
-  
-  <label for="fab-toggle" class="fab-button">
-    <span class="fab-icon">+</span>
-    <span class="ripple-effect"></span>
-  </label>
+<!-- Botão flutuante do WhatsApp -->
+<a href="https://wa.me/5535999692798" class="whatsapp-float" target="_blank" title="Fale com a KodNea no WhatsApp">
+  <img src="iconewtsapp.png" alt="WhatsApp" />
+</a>
 
-  <div class="fab-options">
-    <a href="https://wa.me/5535999692798" class="fab-option" target="_blank" title="WhatsApp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="fab-icon-img">
-    </a>
-    <a href="https://www.instagram.com/kodnea.ia/" class="fab-option" target="_blank" title="Instagram">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" class="fab-icon-img">
-    </a>
-  </div>
-</div>
+<!-- Estilo do botão flutuante -->
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 107px;
+    right: 20px;
+    z-index: 999;
+  }
 
+  .whatsapp-float img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float img:hover {
+    transform: scale(1.1);
+  }
+</style>
 
           <!-- Seção sobre -->
          
@@ -428,7 +436,7 @@ window.addEventListener('scroll', function() {
   
     <div class="container">
      
-
+<section id="contato" class="tela-inteira contato">
   <!-- Seção de contato -->
   <section id="contato" class="tela-inteira contato">
     <div class="container">
@@ -437,12 +445,19 @@ window.addEventListener('scroll', function() {
       <h2>Entre em Contato</h2>
       
      
+      <div class="contact-form-area">
         <form action="https://formsubmit.co/kodnea.ia@gmail.com" method="POST">
-  <input type="text" name="nome" placeholder="Seu nome" required>
-  <input type="email" name="email" placeholder="Seu e-mail" required>
-  <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-  <button type="submit">Enviar</button>
-</form>
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu e-mail" required>
+          <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <div class="instagram-badge">
+          <a href="https://www.instagram.com/kodnea.ia/" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
     </div></div>
 
 
