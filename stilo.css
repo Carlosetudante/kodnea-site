@@ -1402,3 +1402,41 @@ form {
 .instagram-badge img:hover {
   transform: scale(1.1);
 }
+
+.nome-instagram-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.nome-instagram-container input[name="nome"] {
+  flex: 1;
+}
+
+.nome-instagram-container .instagram-badge {
+  flex-shrink: 0;
+}
+
+.nome-instagram-container .instagram-badge img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.nome-instagram-container .instagram-badge img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .nome-instagram-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .nome-instagram-container .instagram-badge {
+    align-self: center;
+    margin-top: 10px;
+  }
+}
