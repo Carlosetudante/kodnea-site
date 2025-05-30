@@ -1440,3 +1440,29 @@ form {
     margin-top: 10px;
   }
 }
+.footer-insta {
+  background-color: #0d0d0d;
+  color: white;
+  text-align: center;
+  padding: 40px 0 20px 0;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #333;
+}
+
+.siga-nos p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.instagram-link {
+  color: #b3b3ff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.instagram-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
