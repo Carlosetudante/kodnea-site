@@ -733,6 +733,54 @@ summary::before {
   max-width: 350px;        /* Limita a largura máxima */
 }
 
+/*cointato*/
+
+.contato-box-kodnea {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00bfff;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.contato-box-kodnea h1,
+.contato-box-kodnea h2,
+.contato-box-kodnea h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.contato-box-kodnea input,
+.contato-box-kodnea textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+}
+
+.contato-box-kodnea button {
+  width: 100%;
+  padding: 12px;
+  background: #00bfff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contato-box-kodnea button:hover {
+  background: #009acd;
+}
+
+
 /* Responsivo para o bloco elementor-element-383cf1b */
 @media (max-width: 900px) {
   .elementor-element-383cf1b {
