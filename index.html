@@ -53,7 +53,7 @@
   <div class="header-container">
 
     <div class="logo">
-      <img src="logodabarra.png" alt="Logo KodNea">
+      <img src="logomaior.png" alt="Logo KodNea">
     </div>
 
     <div class="menu-central">
@@ -438,38 +438,63 @@ window.addEventListener('scroll', function() {
      
 <section id="contato" class="tela-inteira contato">
   <!-- Seção de contato -->
-  <section id="contato" class="tela-inteira contato">
-    <div class="container">
-      <h2>A Revolução Da IA Já Começou. Sua Empresa Vai Evoluir Ou Ficar Pra Trás?</h2>
-
-      <h2>Entre em Contato</h2>
-      
-     
-      <div class="contact-form-area">
-        <form action="https://formsubmit.co/kodnea.ia@gmail.com" method="POST">
-          <div class="nome-instagram-container">
-            <input type="text" name="nome" placeholder="Seu nome" required>
-            <div class="instagram-badge">
-              <a href="https://www.instagram.com/kodnea.ia/" target="_blank">
-                <img src="instagram.png" alt="Instagram">
-              </a>
-            </div>
-          </div>
-          <input type="email" name="email" placeholder="Seu e-mail" required>
-          <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-    </div></div>
-
-
-
-  <!-- Rodapé -->
+  <!-- Rodapé moderno -->
   <footer>
-    <p>&copy; 2025 Seu Projeto. Todos os direitos reservados.
-      KodNea CNPJ 60.813.180/0001-52
-    </p>
+    
+
+    <div class="form-box">
+      <h1 class="titulo animado">REVOLUÇÃO DA IA JÁ COMEÇOU.</h1>
+    <h2 class="subtitulo animado">SUA EMPRESA VAI EVOLUIR OU FICAR PRA TRÁS?</h2>
+      <h3>ENTRE EM CONTATO</h3>
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <h3>Siga-nos nas redes sociais</h3>
+    <div class="social-icons">
+    
+      <a href="https://www.instagram.com/kodnea" target="_blank">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+    </div>
+    <p>&copy;  2025 Seu Projeto. Todos os direitos reservados. KodNea CNPJ 60.813.180/0001-52</p>
   </footer>
+
+  
+  <style>
+    footer {
+      background-color: #111;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.2);
+    }
+  </style>
 
 </body>
 </html>
