@@ -734,15 +734,17 @@ summary::before {
 }
 
 /*cointato*/
-
 .contato-box-kodnea {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid #00bfff;
   border-radius: 15px;
-  padding: 25px;
+  padding: 30px 20px;
   margin: 40px auto;
   max-width: 600px;
+  width: 90%;
   text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .contato-box-kodnea h1,
@@ -750,23 +752,30 @@ summary::before {
 .contato-box-kodnea h3 {
   color: #fff;
   margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 
 .contato-box-kodnea input,
 .contato-box-kodnea textarea {
   width: 100%;
   margin: 10px 0;
-  padding: 12px;
+  padding: 14px;
   border: none;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   font-size: 16px;
+  box-sizing: border-box;
+}
+
+.contato-box-kodnea input::placeholder,
+.contato-box-kodnea textarea::placeholder {
+  color: #ccc;
 }
 
 .contato-box-kodnea button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background: #00bfff;
   color: #000;
   font-weight: bold;
@@ -778,6 +787,53 @@ summary::before {
 
 .contato-box-kodnea button:hover {
   background: #009acd;
+}
+
+/* Ícones sociais */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+  .contato-box-kodnea {
+    padding: 20px 15px;
+  }
+
+  .contato-box-kodnea h1,
+  .contato-box-kodnea h2,
+  .contato-box-kodnea h3 {
+    font-size: 1.2rem;
+  }
+
+  .contato-box-kodnea input,
+  .contato-box-kodnea textarea {
+    font-size: 14px;
+  }
+
+  .contato-box-kodnea button {
+    font-size: 14px;
+  }
+
+  .social-icons img {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 
